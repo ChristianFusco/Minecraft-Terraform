@@ -16,4 +16,4 @@ echo $EULA > eula.txt
 
 yum -y install java-1.8.0-openjdk
 
-exec java -Xmx1024M -Xms1024M -jar server.jar nogui
+exec java -Xmx512M -Xms512M -jar server.jar nogui
