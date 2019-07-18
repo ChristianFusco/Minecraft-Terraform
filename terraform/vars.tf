@@ -5,7 +5,7 @@ variable "instance_type" {
 
 variable "ami" {
   description = "basic linux 2 ami"
-  default     = "ami-0d8f6eb4f641ef691"
+  default     = "ami-0b898040803850657"
 }
 
 variable "region" {
