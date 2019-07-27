@@ -13,5 +13,3 @@ source ~/.profile
 
 pip install awscli --upgrade --user
 rm get-pip.py
-
-aws s3 mb s3://minecraft-terraform --region us-east-1
