@@ -31,7 +31,7 @@ resource "aws_autoscaling_group" "minecraft-asg" {
   launch_configuration      = "${aws_launch_configuration.minecraft-launch-config.name}"
   wait_for_capacity_timeout = "0"
   availability_zones        = ["us-east-1a"]
-  //target_group_arns         = ["${aws_lb_target_group.minecraft-tg.arn}"]
+  target_group_arns         = ["${aws_lb_target_group.minecraft-tg.arn}"]
 }
 
 resource "aws_launch_configuration" "minecraft-launch-config" {
@@ -42,7 +42,5 @@ resource "aws_launch_configuration" "minecraft-launch-config" {
   associate_public_ip_address = false
   security_groups             = ["${aws_security_group.minecraft-instances-sg.id}"]
 
-
   user_data = "${file("${path.module}/userdata.sh")}"
 }
-
