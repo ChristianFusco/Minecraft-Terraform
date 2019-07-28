@@ -5,6 +5,11 @@ write a readme
 	-ongoing
 	-artifctuecture diagram
 
+why does terraform destroy not think the role was deleted
+	it is in the console
+	something about policies
+
+
 install.sh should replace the bucketname in provider.tf with one that isn't mine and create the bucket
 
 better name for install.sh
