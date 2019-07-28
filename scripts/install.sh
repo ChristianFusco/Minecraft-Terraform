@@ -1,5 +1,6 @@
+#!/bin/bash
 
-
+sudo apt-get update
 
 # terraform 
 terraform_version=0.12.5
