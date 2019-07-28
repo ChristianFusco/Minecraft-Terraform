@@ -9,9 +9,6 @@ why does terraform destroy not think the role was deleted
 	it is in the console
 	something about policies
 
-
-install.sh should replace the bucketname in provider.tf with one that isn't mine and create the bucket
-
 better name for install.sh
 	probably break into multiple scripts so people can only install what they need
 	people so picky about their pip install locations jeeze
