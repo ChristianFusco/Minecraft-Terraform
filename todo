@@ -40,8 +40,6 @@ ec2 shouldnt have access to all of the s3 things
 convert to terragrunt so we can destroy one thing at a time
 	also multiple servers
 
-readme
-
 look into price of having a custom url
 	idontdowellunderpressurechristian.com
 	is that too long?
@@ -57,7 +55,8 @@ could probably do a single page application served out of s3 with a lambda or so
 
 can i email myself spend information?
 
-possibly upgrade to micro
+upgrade to micro
+	Looks like its crashing on a nano right after startup
 
 cloudwatch alert for when ec2 security updates are available.
 	super low priority
