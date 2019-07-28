@@ -1,0 +1,58 @@
+add a priority
+	TRELLO BOARD
+
+write a readme
+
+better name for install.sh
+	probably break into multiple scripts so people can only install what they need
+	people so picky about their pip install locations jeeze
+
+make it work - ec2 starts up but server doesnt run/wont accept connections
+
+make the ec2 private with no ip
+	setting it to private in terraform doesnt work unless the subnets are setup to not autoassign a public ip address
+	so do that.  probably in a script.  so we can share it
+
+cloudwatch logging? do i care about money
+	s3 logging oooo
+	maybe i can toggle it on or off
+	seperate terraform folder?
+	Can I email the alerts to tati and make her deal with it?
+
+script to create user with permissions to run only terraform/ssm(when it exists)
+
+ssm access for ec2 so you dont have to use ssh
+	make the ec2 private
+
+does minecraft do passwords?
+
+ec2 shouldnt have access to all of the s3 things
+
+convert to terragrunt so we can destroy one thing at a time
+	also multiple servers
+
+readme
+
+look into price of having a custom url
+	idontdowellunderpressurechristian.com
+	is that too long?
+	probably really cheap
+
+some sort of way to easily change the preferences for the server
+could probably do a single page application served out of s3 with a lambda or something that yoinks information from s3
+	w h a t if the lambda ran terraform
+	and it could spin servers up and down
+	the ec2 could serve the app
+	and then it could just kill the old server
+
+
+can i email myself spend information?
+
+possibly upgrade to micro
+
+cloudwatch alert for when ec2 security updates are available.
+	super low priority
+	we can also just terminate the instance once a week and i think it'll pick up minor patches
+	i dont think ami updates happen that oftend
+
+
