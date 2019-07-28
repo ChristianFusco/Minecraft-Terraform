@@ -1,6 +1,6 @@
 variable "instance_type" {
   description = "size of the instance"
-  default     = "t2.nano"
+  default     = "t2.micro"
 }
 
 variable "ami" {
