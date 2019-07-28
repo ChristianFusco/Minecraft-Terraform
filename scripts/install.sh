@@ -13,3 +13,6 @@ source ~/.profile
 
 pip install awscli --upgrade --user
 rm get-pip.py
+
+aws configure
+
