@@ -2,6 +2,8 @@
 
 Because dang I really didn't have enough work to do at work.
 
+Check out the [Trello board](https://trello.com/b/KA0NXrHX/dev-tasks) for what's currently being worked on.
+
 ### Getting started
 
 Made to work with a fresh Ubuntu Linux install.  If you have an aws account and keys already made, run scripts/install.sh and configure your local aws profile.  Then run `terraform init && terraform apply` in the terraform folder.
