@@ -1,25 +1,20 @@
 #!/bin/bash
 
+minecraftd_version="beta-v0.3"
+
 # Hogs a bunch of memory and it's not even set up right now
 yum erase amazon-ssm-agent –y
-
-mkdir /minecraft
-cd /minecraft
-
-# Probably don't need the && there to get the minecraft latest name
-url=$(curl https://www.minecraft.net/en-us/download/server/ | grep minecraft_server | cut -d \" -f2) \
- && url=$(echo $url | cut -d ' ' -f1)
-
-wget $url
-
-echo "eula=true" > eula.txt
-
 yum -y install java-1.8.0-openjdk
 
-exec java -server -Xmx768M -Xms768M \
-	-XX:+UseParNewGC \
-  	-XX:ParallelGCThreads=2 \
-  	-XX:+UseCompressedOops \
-  	-XX:+TieredCompilation \
-  	-XX:+DoEscapeAnalysis \
-  	-jar server.jar nogui &
+# Wrapper for minecraft client
+# It also downloads a client for you
+cd /srv
+wget https://github.com/ChristianFusco/abs/releases/download/${minecraftd_version}/${minecraftd_version}.tar.gz
+tar -zxf ${minecraftd_version}.tar.gz && rm ${minecraftd_version}.tar.gz
+cd /srv/minecraft-server && sh minecraft-server-install.sh
+
+# Set up minecraft static files
+cd /srv/minecraft && echo "eula=true" > eula.txt
+aws s3 cp s3://362440755021-minecraft-data/server.properties .
+
+minecraftd start
